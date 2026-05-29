@@ -1,5 +1,6 @@
 class Solution {
     public boolean isIsomorphic(String s, String t) {
+        //test
         HashMap<Character, Integer> charIndexS = new HashMap<>();
         HashMap<Character, Integer> charIndexT = new HashMap<>();
         for (int i = 0; i < s.length(); i++) {
