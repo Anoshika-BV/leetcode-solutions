@@ -3,8 +3,8 @@ class Solution {
         //test
         int n = s.length();
 
-        int cnt = 0; //counts the number of non dash character of s
-        String temp = ""; //a temporary string with non dash characters
+        int cnt = 0; 
+        String temp = ""; 
 
         for(int i=0;i<n;i++){
             if(s.charAt(i)!='-'){
@@ -13,11 +13,11 @@ class Solution {
             }
         }
 
-        int first_dash = cnt%k; //where the first dash has to be kept
+        int first_dash = cnt%k; 
 
-        String str = ""; //answer string
+        String str = ""; 
         
-        int c = 0; //count to put dash when this value becomes equal to k
+        int c = 0; 
 
         for(int i=0;i<cnt;i++){
             if(i!=0 && (i==first_dash || c==k)){
