@@ -1,5 +1,6 @@
 class Solution {
     public int countBinarySubstrings(String s) {
+        //test
         int n    = s.length();
         int curr = 1;
         int prev = 0;
@@ -18,8 +19,6 @@ class Solution {
                 curr = 1;
             }
         }
-
-        // for the last part of the string.
         res += Math.min( prev, curr );
 
         return res;
