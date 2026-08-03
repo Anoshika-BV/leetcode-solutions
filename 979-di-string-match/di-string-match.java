@@ -1,5 +1,6 @@
 class Solution {
     public int[] diStringMatch(String s) {
+        //test
         int n = s.length();
         int low = 0, high = n;
         int[] ans = new int[n + 1];
