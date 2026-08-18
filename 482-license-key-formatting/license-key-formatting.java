@@ -1,34 +1,16 @@
 class Solution {
     public String licenseKeyFormatting(String s, int k) {
         //test
-        int n = s.length();
+        s = s.replace("-", "").toUpperCase();
+        StringBuilder ans = new StringBuilder();
 
-        int cnt = 0; 
-        String temp = ""; 
+        for (int i = 0; i < s.length(); i++) {
+            if (i > 0 && (s.length() - i) % k == 0)
+                ans.append("-");
 
-        for(int i=0;i<n;i++){
-            if(s.charAt(i)!='-'){
-                cnt++;
-                temp+=s.charAt(i);
-            }
+            ans.append(s.charAt(i));
         }
 
-        int first_dash = cnt%k; 
-
-        String str = ""; 
-        
-        int c = 0; 
-
-        for(int i=0;i<cnt;i++){
-            if(i!=0 && (i==first_dash || c==k)){
-                str+='-';
-                str+=temp.charAt(i);
-                c=0;
-            }
-            else str = str + temp.charAt(i);
-            c++;
-        }
-        
-        return str.toUpperCase();
+        return ans.toString();
     }
 }
